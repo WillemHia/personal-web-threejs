@@ -6,7 +6,7 @@ npm install
 
 # usage
 
-``javascript
+```javascript
 npm run dev
 ```
 
