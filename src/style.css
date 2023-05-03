@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /*通用样式*/
+  --default-backgroud: #0d1117;
+  --textarea-height: 5rem;
+  --input-padding-top-bottom: 1rem;
+  --input-border-radius: 0.5rem;
+  --input-font-size: 18px;
+  --input-padding-left-right: 1.5rem;
+  --max-width: 80rem;
+  --body-padding-left-right: 4rem;
+  --body-gap: 2rem;
+  --guide-icon-size: 1.5rem;
+  --guide-icon-top-bottom: 1.65rem;
+  --guide-body-footer-width: 3px;
+  --guide-icon-all-height: calc(var(--guide-icon-size) + var(--guide-icon-top-bottom) * 2);
+  --guide-body-height: calc((100vh - var(--guide-icon-all-height)) / 2);
+  --title-font-size: 24px;
+  --title-font-weight: 500;
+  --title-line-height: 28px;
+  --detail-margin-top: 1.5rem;
+  --detail-font-size: 48px;
+  --detail-line-height: 52px;
+  --detail-font-weight: 500;
+  --guide-footer-height: calc(100vh / 4);
+  --introduce-width: 95%;
+  --introduce-border-radius: 0.5rem;
+  --introduce-padding-top-bottom: 4rem;
+  --introduce-title-font-size: 32px;
+  --introduce-title-line-height: 36px;
+  --introduce-title-font-weight: 600;
+  --introduce-title-detail-font-size: 20px;
+  --introduce-title-detail-font-weight: 500;
+  --introduce-title-detail-color: rgba(255, 255, 255, .5);
+  --cart-background-size: 40rem;
+  --cart-background-border-radius: 18rem;
+  --cart-background-filter: 12rem;
+
+  /*导航栏*/
+  --nav-height: 4.75rem;
+  --nav-padding-left-right: 4rem;
+  --nav-padding-top-bottom: 0.5rem;
+  --nav-logo-size: 3.25rem;
+  --nav-name-li-font-size: 18px;
+  --nav-name-font-weight: 700;
+  --nav-ul-gap: 1.5rem;
+  --nav-li-font-weight: 500;
+  --nav-li-a-color: rgb(170, 166, 195);
+  --nav-li-a-hover-color: #fff;
+  --nav-a-padding-top-bottom: 0.5rem;
+
+  /*加载*/
+  --size-loader: 2rem;
+  --size-orbe: 0.4rem;
+  --load-container-bottom: 30%;
+  --load-contianer-gap: 1rem;
+  --loaded-font-size: 18px;
+
+
+  /*home组件*/
+  --home-height: calc(100vh + var(--guide-icon-all-height));
+  --home-margin-top: 0rem;
+  --home-main-color: #7d58bc;
+  --home-minor-color: #dd7df7;
+  --home-body-top: 7.5rem;
+  --home-body-margin-top: 1rem;
+  --home-guide-header-size: 1.2rem;
+  --home-guide-body-bg: linear-gradient(180deg, var(--home-main-color) 60%, #a371f7 100%);
+  --home-guide-body-height-reduce: calc(var(--home-body-top) + var(--home-body-margin-top) + var(--home-guide-header-size));
+  --home-guide-body-height: calc((100vh - var(--home-guide-body-height-reduce)) / 2);
+  --home-guide-icon-shadow: var(--home-minor-color) 0 0 35px 13px;
+  --home-guide-footer-height: var(--home-guide-body-height);
+  --home-guide-footer-bg: linear-gradient(#d2a8ff, #a371f7 10%, #196c2e 70%, #2ea043 80%, #56d364);
+  --home-name-margin-top: 0.5rem;
+  --home-name-font-size: 80px;
+  --home-name-font-weight: 900;
+  --home-introduce-font-size: 30px;
+  --home-introduce-line-height: 40px;
+  --home-introduce-font-weight: 500;
+  --home-introduce-margin-top: 0.5rem;
+
+  /*edu样式*/
+  --edu-main-color: #7ee787;
+  --edu-guide-icon-shadow: var(--edu-main-color) 0 0 35px 13px;
+  --edu-guide-body-bg: linear-gradient(#56d364, #2ea043, var(--default-backgroud));
+  --edu-introduce-flex-derection: row;
+  --edu-introduce-left-padding: 4rem;
+  --edu-introduce-left-width: 55%;
+  --edu-award-margin-top: 0;
+  --edu-award-detail-margin-top: 1rem;
+  --edu-award-detail-li-margin-top-bottom: 1rem;
+  --edu-award-detail-li-line-height: 30px;
+  --edu-introduce-right-width: 45%;
+  --edu-introduce-right-padding-right: 0rem;
+  --edu-introduce-right-padding-left: 2rem;
+  --edu-introduce-img-min-height: 11rem;
+  --edu-guide-footer-bg: linear-gradient(var(--default-backgroud), #ea6045, #ffa28b);
+
+  /*skill组件*/
+  --skill-main-color: #ffa28b;
+  --skill-introduce-body-padding-top-bottom: 4rem;
+  --skill-introduce-body-padding-left-right: var(--body-gap);
+  --skill-introduce-body-gap: 1.5rem;
+  --skill-guide-icon-shadow: var(--skill-main-color) 0 0 35px 13px;
+  --skill-guide-body-bg: linear-gradient(#ffd6cc, #ec6547, #ec6547, var(--default-backgroud));
+  --skill-item-gap: 1.5rem;
+  --skill-item-img-size: 2.5rem;
+  --skill-item-body-height: 0.25rem;
+  --skill-item-body-border-radius: 0.125rem;
+  --skill-item-title-font-size: 1rem;
+  --skill-item-title-font-weight: 400;
+  --skill-item-title-color: #fff;
+  --skill-item-title-margin-bottom: 0.5rem;
+  --skill-guide-footer-bg: linear-gradient(var(--default-backgroud), #797ef9, #abb4ff);
+
+  /*myproject组件*/
+  --project-main-color: #939aff;
+  --project-guide-icon-shadow: var(--project-main-color) 0 0 35px 13px;
+  --project-guide-body-bg: linear-gradient(#abb4ff, #797ef9, var(--default-backgroud));
+  --project-introduce-flex-derection: row;
+  --project-introduce-gap: 2rem;
+  --project-introduce-body-width: 50%;
+  --project-introduce-body-padding-top-bottom: 4rem;
+  --project-introduce-body-padding-left-right: 4rem;
+  --project-item-detail-height: 9rem;
+  --project-item-line-height: 30px;
+  --project-item-detail-margin-top: var(--edu-award-detail-margin-top);
+  --project-guide-footer-bg: linear-gradient(var(--default-backgroud), #f979aa, #ffabc7);
+
+  /*contact*/
+  --contact-main-color: #ff90b5;
+  --contact-guide-icon-shadow: var(--contact-main-color) 0 0 35px 13px;
+  --contact-guide-body-bg: linear-gradient(#ffabc7, #f979aa, var(--default-backgroud));
+  --contact-form-btn-padding-top-bottom: 0.75rem;
+  --contact-form-btn-padding-left-right: 2.5rem;
+  --contact-form-label-line-height: 30px;
+  --contact-form-title-line-height: var(--introduce-title-line-height);
+  --contact-form-btn-line-height: var(--contact-form-label-line-height);
+  --contact-button-height: calc(var(--contact-form-btn-line-height) + var(--contact-form-btn-padding-top-bottom) * 2);
+  --contact-form-input-height: calc(var(--contact-form-label-line-height) + var(--input-padding-top-bottom) * 2);
+  --contact-form-textarea-height: calc(var(--textarea-height) + var(--input-padding-top-bottom) * 2);
+  --contact-form-height: calc(var(--contact-form-input-height) * 2 + var(--contact-form-textarea-height) + var(--contact-button-height) + var(--project-introduce-gap) * 2 + var(--project-introduce-gap) / 1.2 * 2 + var(--project-introduce-gap) / 2.5 * 3 + var(--contact-form-label-line-height) * 3 + var(--contact-form-title-line-height));
+  --contact-introduce-body-height: calc(var(--contact-form-height) + var(--introduce-padding-top-bottom) * 2);
+  --contact-introduce-body-width: 45%;
+  --earth-container-width: 55%;
+  --send-tip-font-size:1rem;
+  --send-tip-border-radius:0.5rem;
+}
+
+body {
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--default-backgroud);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+#app {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #000;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+
+@media (max-width: 1366px) {
+  :root {
+    /*通用样式*/
+    --max-width: 72rem;
+    --cart-background-size: 34rem;
+    --cart-background-border-radius: 14rem;
+    --cart-background-filter: 10rem;
+    --guide-icon-size: 22px;
+    --guide-icon-top-bottom: 1.4rem;
+    --detail-font-size: 44px;
+    --detail-line-height: 49px;
+
+    /*home组件适配*/
+    --home-body-top: 6.5rem;
+    --home-name-font-size: 70px;
+    --home-name-margin-top: 0.75rem;
+    --home-introduce-font-size: 28px;
+    --home-introduce-line-height: 37px;
+
+    /*edu组件适配*/
+    --introduce-title-font-size: 30px;
+    --introduce-title-line-heigh: 34px;
+    --introduce-title-detail-font-size: 19px;
+    --edu-award-detail-li-line-height: 29px;
+    --edu-introduce-left-padding: 3rem;
+    --introduce-padding-top-bottom: 3rem;
+
+    /*skill组件适配*/
+    --skill-introduce-body-padding-top-bottom: 3rem;
+    --skill-item-gap: 1.25rem;
+    --skill-item-img-size: 2rem;
+    --skill-item-title-margin-bottom: 0.5rem;
+
+    /*project组件*/
+    --project-introduce-gap: 1.75rem;
+    --project-introduce-body-padding-left-right: 2.5rem;
+    --project-item-detail-height: 8.5rem;
+    --project-item-line-height: 26px;
+
+    /*contact组件*/
+    --input-font-size: 17px;
+    --input-padding-left-right: 1.25rem;
+    --contact-form-btn-padding-left-right: 2rem;
+    --contact-form-label-line-height: 28px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --max-width: 57rem;
+    --cart-background-size: 26rem;
+    --cart-background-border-radius: 10rem;
+    --cart-background-filter: 8rem;
+    --guide-body-footer-width: 2px;
+    --guide-icon-size: 1.25rem;
+    --detail-font-size: 35px;
+    --detail-line-height: 40px;
+
+    /*home组件适配*/
+    --home-body-top: 5.5rem;
+    --home-guide-header-size: 1rem;
+    --home-name-font-size: 60px;
+    --home-name-margin-top: 1rem;
+    --home-introduce-font-size: 26px;
+    --home-introduce-line-height: 35px;
+    --home-guide-icon-shadow: var(--home-minor-color) 0 0 25px 11px;
+
+    /*edu组件适配*/
+    --edu-guide-icon-shadow: var(--edu-main-color) 0 0 25px 11px;
+    --introduce-title-font-size: 28px;
+    --introduce-title-line-heigh: 32px;
+    --introduce-title-detail-font-size: 16px;
+    --edu-award-detail-li-line-height: 26px;
+    --edu-introduce-left-padding: 2.5rem;
+    --edu-award-detail-margin-top: 0.5rem;
+    --edu-award-detail-li-margin-top-bottom: 0.5rem;
+    --introduce-padding-top-bottom: 2.5rem;
+
+    /*skill组件适配*/
+    --skill-guide-icon-shadow: var(--skill-main-color) 0 0 25px 11px;
+    --skill-introduce-body-padding-top-bottom: 2rem;
+    --skill-item-gap: 1rem;
+    --skill-item-title-margin-bottom: 0.25rem;
+    --skill-introduce-body-gap: 1rem;
+
+    /*project组件*/
+    --project-introduce-gap: 1.5rem;
+    --project-introduce-body-padding-left-right: 2rem;
+    --project-item-detail-height: 8rem;
+    --project-item-line-height: 22px;
+
+    /*contact组件*/
+    --input-padding-top-bottom: 0.75rem;
+    --input-font-size: 16px;
+    --input-padding-left-right: 1rem;
+    --contact-form-btn-padding-left-right: 1.75rem;
+    --contact-form-label-line-height: 20px;
+    --contact-form-title-line-height: 28px;
+
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --max-width: 30rem;
+    --cart-background-size: 22rem;
+    --cart-background-border-radius: 6rem;
+    --cart-background-filter: 6rem;
+    --body-padding-left-right: 1.5rem;
+    --body-gap: 1.5rem;
+    --guide-body-footer-width: 1.5px;
+    --guide-icon-size: 18px;
+    --guide-icon-top-bottom: calc((var(--home-margin-top) - var(--guide-icon-size)) / 2);
+    --guide-body-height: calc(100vh / 3.0 - var(--guide-icon-all-height));
+    --title-font-size: 18px;
+    --title-font-weight: 400;
+    --title-line-height: : 22px;
+    --introduce-width: 90%;
+    --detail-font-size: 20px;
+    --detail-line-height: 24px;
+    --detail-margin-top: 0.5rem;
+
+    /*导航栏适配*/
+    --nav-height: 3.5rem;
+    --nav-padding-left-right: 1rem;
+    --nav-padding-top-bottom: 0.5rem;
+    --nav-logo-size: 2.5rem;
+    --nav-logo-margin-right: 0.25rem;
+    --nav-name-li-font-size: 14px;
+    --nav-name-font-weight: 600;
+    --nav-ul-gap: 0.5rem;
+    --nav-li-font-weight: 400;
+    --nav-a-padding-top-bottom: 6px;
+
+    /*加载适配*/
+    --size-loader: 1.5rem;
+    --size-orbe: 0.3rem;
+    --load-container-gap: 0.5rem;
+    --load-container-bottom: 15%;
+    --loaded-font-size: 14px;
+
+    /*home组件适配*/
+    --home-margin-top: var(--nav-height);
+    --home-height: calc(100vh / 2.5);
+    --home-body-top: 0rem;
+    --home-guide-body-height: calc(100vh / 7);
+    --home-guide-footer-height: calc(var(--home-height) - var(--home-guide-body-height) - var(--home-margin-top) - var(--home-guide-header-size) - var(--home-body-margin-top));
+    --home-name-font-size: 32px;
+    --home-introduce-font-size: 16px;
+    --home-introduce-line-height: 22px;
+
+    /*edu组件*/
+    --edu-introduce-flex-derection: column;
+    --introduce-title-font-size: 26px;
+    --introduce-title-line-heigh: 30px;
+    --edu-award-margin-top: 0.75rem;
+    --introduce-title-detail-font-size: 15px;
+    --edu-award-detail-li-line-height: 20px;
+    --edu-award-detail-margin-top: 0rem;
+    --edu-introduce-left-width: 100%;
+    --edu-introduce-right-width: 100%;
+    --edu-introduce-left-padding: 0rem;
+    --introduce-padding-top-bottom: 1em;
+    --edu-introduce-right-padding-right: 0em;
+    --edu-introduce-right-padding-left: 0em;
+
+    /*skill组件适配*/
+    --skill-introduce-body-padding-top-bottom: 1.5rem;
+    --skill-item-gap: 0.75rem;
+    --skill-item-title-font-size: 0.75rem;
+    --skill-item-img-size: 1.75rem;
+    --skill-item-title-margin-bottom: 0.25rem;
+    --skill-item-body-height: 3px;
+    --skill-item-body-border-radius: 1.5px;
+    --skill-introduce-body-padding-left-right: 0;
+
+    /*project组件*/
+    --project-introduce-flex-derection: column;
+    --project-introduce-body-width: 100%;
+    --project-introduce-gap: 1.25rem;
+    --project-introduce-body-padding-left-right: 1.5rem;
+    --project-item-detail-height: 5rem;
+    --project-item-detail-margin-top: 0.75rem;
+
+    /*contact组件*/
+    --contact-introduce-body-width: 100%;
+    --earth-container-width: 100%;
+    --textarea-height: 5rem;
+    --input-font-size: 15px;
+    --contact-form-label-line-height: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    --max-width: 25rem;
+    --cart-background-size: 18rem;
+    --cart-background-border-radius: 5rem;
+    --cart-background-filter: 4rem;
+    --body-padding-left-right: 1.25rem;
+    --body-gap: 1rem;
+    --guide-body-height: calc(100vh / 4.0);
+    --guide-footer-height: calc(100vh / 5.5);
+
+    /*导航栏适配*/
+    --nav-a-padding-top-bottom: 4px;
+
+    --home-guide-header-size: 0.75rem;
+
+    --introduce-title-font-size: 24px;
+    --introduce-title-line-heigh: 28px;
+    --introduce-title-font-weight: 500;
+    --introduce-title-detail-font-weight: 400;
+    --edu-award-detail-li-line-height: 20px;
+    --edu-award-detail-margin-top: 0rem;
+    --edu-introduce-img-min-height: 9rem;
+
+
+    /*skill组件适配*/
+    --skill-introduce-body-padding-top-bottom: 1rem;
+    --skill-item-gap: 0.5rem;
+    --skill-item-title-font-size: 0.75rem;
+    --skill-item-img-size: 1.75rem;
+    --skill-item-title-margin-bottom: 0.25rem;
+
+    /*project组件适配*/
+    --project-introduce-gap: 1rem;
+    --project-introduce-body-padding-left-right: 1rem;
+    --project-item-detail-height: 6.5rem;
+    --project-item-line-height: 20px;
+    --project-item-detail-margin-top: 0.75rem;
+
+    /*contact组件适配*/
+    --contact-form-label-line-height: 24px;
+    --input-padding-top-bottom: 0.5rem;
+    --contact-form-btn-padding-left-right: 1.5rem;
+    --contact-form-btn-line-height: 20px;
+    --send-tip-font-size: 14px;
+    --send-tip-border-radius: 0.25rem;
+  }
+}
+
+@media (max-width: 350px) {
+  :root {
+    --guide-body-height: calc(100vh / 3.5);
+
+    --home-name-font-size: 30px;
+    --home-name-font-weight: 700;
+
+
+    --introduce-title-detail-font-size: 14px;
+    --edu-award-detail-li-line-height: 18px;
+  }
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
